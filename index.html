@@ -1,102 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>É só isso que eu te peço</title>
+    <!-- Configurações do documento -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos -->
+    <title>É só isso que eu te peço</title> <!-- Título da página -->
 </head>
-
 <body>
-
+    <!-- Imagem exibindo um mendigo vestido como Pica-Pau -->
     <img src="./mendigo-pica-pau.webp" alt="">
-    <h1
-        style="color: rgb(255, 190, 26); font-size: 64px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; translate: 0 -50px; text-shadow: 0 0 8px black;">
+    
+    <!-- Título e pedido ao professor -->
+    <h1 style="color: rgb(255, 190, 26); font-size: 64px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; translate: 0 -50px; text-shadow: 0 0 8px black;">
         Olá, professor</h1>
-    <p
-        style="color: white; font-size: 32px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; translate: 0 -55px; font-weight: 700; text-shadow: 0 0 6px black; text-align: center;">
+    <p style="color: white; font-size: 32px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; translate: 0 -55px; font-weight: 700; text-shadow: 0 0 6px black; text-align: center;">
         O senhor poderia, por gentileza,<br> colocar o Átila no suporte?</p>
+    
+    <!-- Botões com links -->
     <div class="botoes">
-
-        <a href="./obrigado.html"><button id="pos" style="cursor: pointer;">CLARO, MEU MELHOR ALUNO</button></a>
-        <button id="neg"
-            style="background: linear-gradient(145deg, rgb(219, 5, 5), rgb(249, 65, 65)); box-shadow: 0 0 20px rgb(255, 0, 0);">NÃO</button>
-
+        <a href="./obrigado.html"><button id="pos" style="cursor: pointer;">CLARO, MEU MELHOR ALUNO</button></a> <!-- Botão para agradecer -->
+        <!-- Botão de negação com efeito de movimento -->
+        <button id="neg" style="background: linear-gradient(145deg, rgb(219, 5, 5), rgb(249, 65, 65)); box-shadow: 0 0 20px rgb(255, 0, 0);">NÃO</button>
     </div>
-
+    
+    <!-- Vídeo de fundo em loop -->
     <video src="./Rain-Background.mp4" autoplay loop></video>
-
 </body>
-
 </html>
 
 <style>
+    /* Estilos globais para toda a página */
     * {
-        margin: 0;
-        padding: 0;
+        margin: 0; /* Remove margens */
+        padding: 0; /* Remove preenchimentos */
     }
 
+    /* Estilos específicos para o corpo da página */
     body {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: black;
-        overflow: hidden;
+        display: flex; /* Usa um layout de caixa flexível */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        flex-direction: column; /* Define a direção dos itens como coluna */
+        background-color: black; /* Cor de fundo preta */
+        overflow: hidden; /* Oculta conteúdo que ultrapassa o limite da página */
     }
 
+    /* Estilos para a imagem */
     img {
-        width: 400px;
-        height: auto;
-        margin-top: 80px;
+        width: 400px; /* Largura fixa da imagem */
+        height: auto; /* Altura automática proporcional à largura */
+        margin-top: 80px; /* Margem superior */
     }
 
+    /* Estilos para os botões */
     button {
-        width: 250px;
-        background-color: black;
-        color: white;
-        height: 50px;
-        font-weight: bold;
-        font-size: 16px;
-        background: linear-gradient(145deg, rgb(13, 60, 190), rgb(22, 123, 231));
-        border: none;
-        box-shadow: 0 0 20px rgb(12, 76, 196);
-        transition: 0.3s;
+        width: 250px; /* Largura do botão */
+        background-color: black; /* Cor de fundo do botão */
+        color: white; /* Cor do texto do botão */
+        height: 50px; /* Altura do botão */
+        font-weight: bold; /* Texto em negrito */
+        font-size: 16px; /* Tamanho da fonte */
+        background: linear-gradient(145deg, rgb(13, 60, 190), rgb(22, 123, 231)); /* Gradiente de cor de fundo */
+        border: none; /* Remove a borda do botão */
+        box-shadow: 0 0 20px rgb(12, 76, 196); /* Sombra do botão */
+        transition: 0.3s; /* Suaviza a transição */
     }
 
+    /* Efeito de hover para o botão "Sim" */
     #pos:hover {
-        transform: scale(1.2);
-        box-shadow: 0 0 60px rgb(1, 90, 255);
-        transition: 0.5s;
+        transform: scale(1.2); /* Aumenta o tamanho do botão em hover */
+        box-shadow: 0 0 60px rgb(1, 90, 255); /* Sombra aumentada */
+        transition: 0.5s; /* Suaviza a transição */
     }
 
+    /* Estilos para os botões e ajustes de layout */
     .botoes {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: -30px;
+        display: flex; /* Usa um layout de caixa flexível */
+        justify-content: center; /* Alinha os itens ao centro horizontalmente */
+        gap: 2rem; /* Espaçamento entre os botões */
+        margin-top: -30px; /* Margem superior negativa para sobrepor o título */
     }
 
+    /* Estilos para o vídeo de fundo */
     video {
-        position: absolute;
-        width: 100vw;
-        height: auto;
-        z-index: -1;
-        opacity: 0.4;
+        position: absolute; /* Posição absoluta */
+        width: 100vw; /* Largura igual à largura da janela de visualização */
+        height: auto; /* Altura automática proporcional à largura */
+        z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+        opacity: 0.4; /* Opacidade reduzida */
     }
 </style>
 
 <script>
-
+    // Seleciona o botão "Não"
     const botao = document.querySelector('#neg');
 
+    // Variáveis para controlar o movimento do botão
     let moveX = 0;
     let moveY = 0;
 
+    // Adiciona um evento de mouseover ao botão "Não"
     botao.addEventListener("mouseover", function () {
-        moveX = (Math.random() * 801 - 400); //gera um número entre -400 e 400 para atribuir ao movimento no eixo X do botão (esse valor é ideal pro botão não sumir da tela nessas proporções desse código, mas pode mudar conforme você faça sua tela)
-        moveY = (Math.random() * 401 - 400); //aqui é o mesmo esquema de random, mas é de -400 a 0, respeitando o valor pra não sumir da tela, que acaba tendo um limite diferente do eixo X
+        // Gera números aleatórios para a posição do botão
+        moveX = (Math.random() * 801 - 400);
+        moveY = (Math.random() * 401 - 400);
 
-        botao.style.transform = `translate(${moveX}px, ${moveY}px)`; //atribui os valores randomicos ao botão aplicando um translate no css dele
+        // Aplica uma transformação ao botão para movê-lo
+        botao.style.transform = `translate(${moveX}px, ${moveY}px)`;
     })
-
 </script>
