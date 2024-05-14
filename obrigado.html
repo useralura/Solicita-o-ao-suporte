@@ -2,59 +2,71 @@
 <html lang="en">
 
 <head>
+    <!-- Definição do conjunto de caracteres e da escala de visualização -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
     <title>Obrigado, professor!</title>
 </head>
 
 <body>
+    <!-- Container principal -->
     <div class="container">
 
+        <!-- Título principal da página -->
         <h1
             style="color: rgb(255, 190, 26); font-size: 36px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; text-shadow: 0 0 8px black;">
             OBRIGADO, professor</h1>
+        <!-- Subtítulo -->
         <h2
             style="color: white; font-size: 30px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; text-shadow: 0 0 6px black; margin-bottom: 20px;">
             Atributos melhorados:</h2>
 
+        <!-- Bloco de atributo 1 -->
         <div class="att1">
             <p class="atributo1">Alegria:</p>
             <p class="up1" style="color: rgb(5, 180, 5);">+40%</p>
         </div>
 
+        <!-- Bloco de atributo 2 -->
         <div class="att2">
             <p class="atributo2">Gratidão ao professor:</p>
             <p class="up2" style="color: rgb(5, 180, 5);">+23%</p>
         </div>
 
+        <!-- Bloco de atributo 3 -->
         <div class="att3">
             <p class="atributo3">Vontade de sair da EPGT:</p>
             <p class="up3" style="color: red">-32%</p>
         </div>
 
+        <!-- Bloco de atributo 4 -->
         <div class="att4">
             <p class="atributo4">Mau humor:</p>
             <p class="up4" style="color: red">-17%</p>
         </div>
 
+        <!-- Botão de seleção -->
         <button id="selectedBtn">SELECIONADO</button>
+        <!-- Mensagem de agradecimento -->
         <p id="thanksMessage"
             style="color: rgb(255, 190, 26); font-size: 36px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; text-shadow: 0 0 8px black; opacity: 0; display: none;">
             MUITO THANKS</p>
     </div>
 
-    <!-- Usei a imagem como background ao invés de pôr direto no css, mas não lembro o porquê... -->
+    <!-- Imagem de fundo -->
     <img src="./supersayajin.gif" alt="" class="background">
 </body>
 
-</html>
-
+<!-- Estilos CSS -->
 <style>
+    /* Resetando margens e preenchimentos padrão */
     * {
         margin: 0;
         padding: 0;
     }
 
+    /* Estilos gerais do corpo da página */
     body {
         display: flex;
         flex-direction: column;
@@ -62,6 +74,7 @@
         background-color: black;
     }
 
+    /* Estilos da imagem de fundo */
     .background {
         position: absolute;
         opacity: 0.5;
@@ -70,16 +83,19 @@
         z-index: -2;
     }
 
+    /* Estilos do título principal */
     h1 {
         opacity: 0;
         transition: 1s;
     }
 
+    /* Estilos do subtítulo */
     h2 {
         opacity: 0;
         transition: 1s;
     }
 
+    /* Estilos do container principal */
     .container {
         display: flex;
         flex-direction: column;
@@ -89,6 +105,7 @@
         margin-top: 150px;
     }
 
+    /* Estilos dos blocos de atributos */
     .att1,
     .att2,
     .att3,
@@ -101,6 +118,7 @@
         transition: 1s;
     }
 
+    /* Estilos dos atributos */
     .atributo1,
     .atributo2,
     .atributo3,
@@ -110,6 +128,7 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
+    /* Estilos dos valores dos atributos */
     .up1,
     .up2,
     .up3,
@@ -120,6 +139,7 @@
         opacity: 0;
     }
 
+    /* Estilos do efeito de fundo do container */
     .container::before {
         content: '';
         position: absolute;
@@ -132,6 +152,7 @@
         z-index: -1;
     }
 
+    /* Estilos do botão de seleção */
     button {
         height: 40px;
         background-color: rgb(255, 190, 26);
@@ -142,53 +163,61 @@
         transition: 2s;
     }
 
+    /* Efeito de hover no botão */
     button:hover {
         transform: scale(1.05);
         transition: 0.5s;
     }
 </style>
 
+<!-- Scripts JavaScript -->
 <script>
 
-    //A partir daqui eu tava com preguiça e queria gravar o vídeo logo kkkkkkkk
-    //fiquem a vontade pra melhorar essa gambiarra
-
+    /* Função para mostrar atributo 1 */
     function showAtt1() {
         document.querySelector('.att1').style.opacity = '1';
         document.querySelector('.att1').style.translate = '0';
     }
 
+    /* Função para mostrar atributo 2 */
     function showAtt2() {
         document.querySelector('.att2').style.opacity = '1';
         document.querySelector('.att2').style.translate = '0';
     }
 
+    /* Função para mostrar atributo 3 */
     function showAtt3() {
         document.querySelector('.att3').style.opacity = '1';
         document.querySelector('.att3').style.translate = '0';
     }
 
+    /* Função para mostrar atributo 4 */
     function showAtt4() {
         document.querySelector('.att4').style.opacity = '1';
         document.querySelector('.att4').style.translate = '0';
     }
 
+    /* Função para mostrar o valor do atributo 1 */
     function showUp1() {
         document.querySelector('.up1').style.opacity = '1';
     }
 
+    /* Função para mostrar o valor do atributo 2 */
     function showUp2() {
         document.querySelector('.up2').style.opacity = '1';
     }
 
+    /* Função para mostrar o valor do atributo 3 */
     function showUp3() {
         document.querySelector('.up3').style.opacity = '1';
     }
 
+    /* Função para mostrar o valor do atributo 4 */
     function showUp4() {
         document.querySelector('.up4').style.opacity = '1';
     }
 
+    /* Função para animação dos elementos */
     function animation() {
         document.querySelector('h1').style.opacity = 1;
 
@@ -237,9 +266,11 @@
         animation();
     }, 100);
 
+    /* Evento de clique no botão de seleção */
     document.getElementById("selectedBtn").addEventListener("click", function () {
         document.getElementById("selectedBtn").style.display = "none";
         document.getElementById("thanksMessage").style.opacity = '1';
         document.getElementById("thanksMessage").style.display = "block";
     });
 </script>
+</html>
